@@ -7,15 +7,21 @@ public class main {
         Scanner scanner = new Scanner(System.in);
         while (scanner.hasNext()) {
             int r = scanner.nextInt();
-            int v = scanner.nextInt();
-            deal(r, v);
+            deal(r);
         }
         scanner.close();
     }
 
-    private static void deal(int r, int v) {
-        
-        if (r % v == 0) {
+    private static void deal(int r) {
+        String string = String.valueOf(r);
+        boolean flag = false;
+        for (int i = 0; i < string.length(); i++) {
+            flag = string.charAt(i) == '9';
+            if (flag){
+                break;
+            }
+        }
+        if (flag) {
             System.out.println("YES");
         } else {
             System.out.println("NO");
