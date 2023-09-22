@@ -14,7 +14,7 @@ public class main {
     }
 
     private static void deal(int r, int v) {
-
+        
         if (r % v == 0) {
             System.out.println("YES");
         } else {
@@ -22,5 +22,4 @@ public class main {
         }
     }
 
-    private  static boolean judge()
 }
